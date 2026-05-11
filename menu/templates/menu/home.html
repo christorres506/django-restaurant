@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+    <title>Big City Burgers</title>
+</head>
+
+<body>
+    <!--Navbar-->
+
+    <header>
+        <nav class="navbar p-3 navbar-dark bg-dark navbar-expand-lg sticky-top">
+            <div class="container">
+                <img src="{% static 'menu/assets/logo.png' %}" alt="logo" height="45">
+                <a class="navbar-brand fw-bold" href="#">Big City Burgers</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="ms-auto navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hours">Hours</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Hero section-->
+
+    <section id="hero">
+        <div class="container text-center">
+            <h1 class="fw-bold display-2">Big City Burgers</h1>
+            <p class="lead">Juicy, flame-grilled burgers stacked with fresh toppings and bold flavors. Made from
+                scratch, served hot, and built for people who take their food seriously.</p>
+            <button type="button" class="btn btn-warning btn-lg">View Our Menu</button>
+        </div>
+    </section>
+
+    <!--Menu section-->
+
+    <section id="menu">
+        <div class="container py-5 text-center">
+            <h2 class="pb-5 fw-bold display-5">Our Menu</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/classic.jpeg' %}" class="card-img-top" alt="image of a classic burguer">
+                        <div class="card-body">
+                            <h5>The Classic</h5>
+                            <p class="card-text">A juicy beef patty, American cheese, lettuce, tomato, pickles and our
+                                secret sauce.</p>
+                            <p><strong>$10.99</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/bbqburguer.jpeg' %}" class="card-img-top" alt="BBQ burger">
+                        <div class="card-body">
+                            <h5>The BBQ Smokehouse</h5>
+                            <p class="card-text">Slow smoked beef patty, crispy bacon, cheddar cheese, onion rings and
+                                smoky BBQ sauce.</p>
+                            <p><strong>$13.99</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/spicyburguer.webp' %}" class="card-img-top" alt="Spicy burger">
+                        <div class="card-body">
+                            <h5>The Spicy Inferno</h5>
+                            <p class="card-text">Double beef patty, pepper jack cheese, jalapeños, sriracha mayo and
+                                crispy fried onions. Not for the weak.</p>
+                            <p><strong>$12.99</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/mushroom.jpeg' %}" class="card-img-top" alt="Mushroom burger">
+                        <div class="card-body">
+                            <h5>The Mushroom Swiss </h5>
+                            <p class="card-text">Juicy beef patty topped with sautéed mushrooms, melted swiss cheese and
+                                garlic aioli.</p>
+                            <p><strong>$11.99</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/avocado.jpeg' %}" class="card-img-top" alt="Avocado burger">
+                        <div class="card-body">
+                            <h5>The Avocado Smash</h5>
+                            <p class="card-text">Fresh smashed avocado, beef patty, bacon, tomato and chipotle mayo on a
+                                pretzel bun. </p>
+                            <p><strong>$13.49</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'menu/assets/classic.jpeg' %}" class="card-img-top" alt="image of a busguer with avocado">
+                        <div class="card-body">
+                            <h5>The Double Stack </h5>
+                            <p class="card-text">Two beef patties, double cheese, caramelized onions and Big City
+                                special sauce. A beast of a burger.</p>
+                            <p><strong>$14.99</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Hours and contact section-->
+
+    <section id="hours" class="py-5 text-center border-top border-bottom border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="fw-bolds mb-3">Hours</h3>
+                    <p>Mon-Fri 10am to 8pm</p>
+                    <p>Sat-Sun 10am to 10pm</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bold mb-3">Contact</h3>
+                    <p>📞 Phone(111)222-3344</p>
+                    <p>✉️ Email:burguer@burguer.com</p>
+                    <p>📍 Address:7 burguer Ave, Chicago, IL, 25432</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-1">© 2026 Big City Burgers. All rights reserved.</p>
+        <p class="mb-0">
+        <a href="#" class="text-warning me-3">Instagram</a>
+        <a href="#" class="text-warning me-3">Facebook</a>
+        <a href="#" class="text-warning">Yelp</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
