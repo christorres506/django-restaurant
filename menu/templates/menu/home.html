@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'menu/style.css' %}">
@@ -51,78 +51,22 @@
         <div class="container py-5 text-center">
             <h2 class="pb-5 fw-bold display-5">Our Menu</h2>
             <div class="row">
+                {% for item in items %}
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{% static 'menu/assets/classic.jpeg' %}" class="card-img-top" alt="image of a classic burguer">
+                        {% if item.image %}
+                        <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                        {% endif %}
                         <div class="card-body">
-                            <h5>The Classic</h5>
-                            <p class="card-text">A juicy beef patty, American cheese, lettuce, tomato, pickles and our
-                                secret sauce.</p>
-                            <p><strong>$10.99</strong></p>
+                            <h5>{{ item.name }}</h5>
+                            <p class="card-text">{{ item.description }}</p>
+                            <p><strong>${{ item.price }}</strong></p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'menu/assets/bbqburguer.jpeg' %}" class="card-img-top" alt="BBQ burger">
-                        <div class="card-body">
-                            <h5>The BBQ Smokehouse</h5>
-                            <p class="card-text">Slow smoked beef patty, crispy bacon, cheddar cheese, onion rings and
-                                smoky BBQ sauce.</p>
-                            <p><strong>$13.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'menu/assets/spicyburguer.webp' %}" class="card-img-top" alt="Spicy burger">
-                        <div class="card-body">
-                            <h5>The Spicy Inferno</h5>
-                            <p class="card-text">Double beef patty, pepper jack cheese, jalapeños, sriracha mayo and
-                                crispy fried onions. Not for the weak.</p>
-                            <p><strong>$12.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'menu/assets/mushroom.jpeg' %}" class="card-img-top" alt="Mushroom burger">
-                        <div class="card-body">
-                            <h5>The Mushroom Swiss </h5>
-                            <p class="card-text">Juicy beef patty topped with sautéed mushrooms, melted swiss cheese and
-                                garlic aioli.</p>
-                            <p><strong>$11.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'menu/assets/avocado.jpeg' %}" class="card-img-top" alt="Avocado burger">
-                        <div class="card-body">
-                            <h5>The Avocado Smash</h5>
-                            <p class="card-text">Fresh smashed avocado, beef patty, bacon, tomato and chipotle mayo on a
-                                pretzel bun. </p>
-                            <p><strong>$13.49</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'menu/assets/classic.jpeg' %}" class="card-img-top" alt="image of a busguer with avocado">
-                        <div class="card-body">
-                            <h5>The Double Stack </h5>
-                            <p class="card-text">Two beef patties, double cheese, caramelized onions and Big City
-                                special sauce. A beast of a burger.</p>
-                            <p><strong>$14.99</strong></p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
+
         </div>
     </section>
 
@@ -149,9 +93,9 @@
     <footer class="bg-dark text-white text-center py-4">
         <p class="mb-1">© 2026 Big City Burgers. All rights reserved.</p>
         <p class="mb-0">
-        <a href="#" class="text-warning me-3">Instagram</a>
-        <a href="#" class="text-warning me-3">Facebook</a>
-        <a href="#" class="text-warning">Yelp</a>
+            <a href="#" class="text-warning me-3">Instagram</a>
+            <a href="#" class="text-warning me-3">Facebook</a>
+            <a href="#" class="text-warning">Yelp</a>
         </p>
     </footer>
 
