@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from .models import MenuItem
-
-# Create your views here.
+from .models import MenuItem, BusinessHours, ContactInfo
 
 def home(request):
     items = MenuItem.objects.all()
-    return render(request, 'menu/home.html', {'items': items})
+    hours = BusinessHours.objects.first()
+    contact = ContactInfo.objects.first()
+    return render(request, 'menu/home.html', {
+        'items': items,
+        'hours': hours,
+        'contact': contact,
+    })

@@ -10,3 +10,18 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return self.name
+    
+class BusinessHours(models.Model):
+    monday_friday = models.CharField(max_length=100)
+    saturday_sunday = models.CharField(max_length=100)
+
+    def __str__(self):
+        return "Business Hours"
+
+class ContactInfo(models.Model):
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    address = models.CharField(max_length=200)
+
+    def __str__(self):
+        return "Contact Info"
